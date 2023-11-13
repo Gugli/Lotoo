@@ -1,0 +1,30 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug exe",
+            "type": "cppvsdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/zig-out/bin/cli.exe",
+            "args": [
+                "load ./test/test.zip",
+                "card_next 1",
+                "card_next 2",
+                "card_next 3",
+                "game_start",
+                "game_next","game_next","game_next","game_next","game_next",
+                "game_end",
+                "game_test",
+                "exit"],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "symbolSearchPath": "${workspaceFolder}/zig-out/bin",
+            "environment": [],
+            "externalConsole": false,
+            "logging": {
+                "moduleLoad": false
+            },
+            "preLaunchTask": "build",
+        }
+    ]
+}
